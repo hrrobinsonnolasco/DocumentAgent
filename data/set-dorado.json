@@ -1,0 +1,22 @@
+[
+  {"id": 1, "pregunta": "¿Quién dictó el curso “Etapas del Proceso Productivo de una Mina” y en qué fecha?", "archivo": "01.-Etapas-del-Proceso-Productivo-de-una-Mina.pdf", "pagina": 1, "tipo": "está"},
+  {"id": 2, "pregunta": "En ese curso, ¿en qué rango de ley (%Cu) se sitúa el mineral de cobre en Chile?", "archivo": "01.-Etapas-del-Proceso-Productivo-de-una-Mina.pdf", "pagina": 5, "tipo": "está"},
+  {"id": 3, "pregunta": "¿Con qué técnica se valoriza típicamente un proyecto minero según esa presentación?", "archivo": "01.-Etapas-del-Proceso-Productivo-de-una-Mina.pdf", "pagina": 8, "tipo": "está"},
+  {"id": 4, "pregunta": "¿Qué ley chilena formalizó el marco de certificación de recursos y reservas, y en qué año?", "archivo": "01.-Etapas-del-Proceso-Productivo-de-una-Mina.pdf", "pagina": 10, "tipo": "está"},
+  {"id": 5, "pregunta": "¿Cuál es el producto intermedio típico de la flotación en esa presentación?", "archivo": "01.-Etapas-del-Proceso-Productivo-de-una-Mina.pdf", "pagina": 20, "tipo": "está"},
+  {"id": 6, "pregunta": "¿Quién publicó el boletín “Proyectos de inversión minera y prospectos en estudio” y en qué fecha?", "archivo": "2001-Proyectos_de_inversion_minera.pdf", "pagina": 2, "tipo": "está"},
+  {"id": 7, "pregunta": "Según ese boletín, ¿en qué metales era el Perú el mayor productor y en cuáles el segundo?", "archivo": "2001-Proyectos_de_inversion_minera.pdf", "pagina": 5, "tipo": "está"},
+  {"id": 8, "pregunta": "¿Qué porcentaje de las áreas de concesiones mineras estaba en explotación según INGEMMET 2001?", "archivo": "2001-Proyectos_de_inversion_minera.pdf", "pagina": 5, "tipo": "está"},
+  {"id": 9, "pregunta": "Proyecto Accha (Titiminas): ¿empresa, departamento y metales?", "archivo": "2001-Proyectos_de_inversion_minera.pdf", "pagina": 10, "tipo": "está"},
+  {"id": 10, "pregunta": "¿Cuántos proyectos y qué inversión tiene la Cartera de Exploración Minera 2026?", "archivo": "7917586-cpem-2026.pdf", "pagina": 5, "tipo": "está"},
+  {"id": 11, "pregunta": "¿Qué fecha de consulta usa la tabla de la CPEM 2026?", "archivo": "7917586-cpem-2026.pdf", "pagina": 8, "tipo": "está"},
+  {"id": 12, "pregunta": "Accopata: ¿operador, departamento, tipo, metal e inversión?", "archivo": "7917586-cpem-2026.pdf", "pagina": 8, "tipo": "está"},
+  {"id": 13, "pregunta": "¿Cuántos proyectos, departamentos e inversión tiene la Cartera de Inversión Minera 2026?", "archivo": "8277304-cpim-2026.pdf", "pagina": 6, "tipo": "está"},
+  {"id": 14, "pregunta": "¿Por qué salió San Gabriel de la cartera de inversión 2026 y en qué fecha?", "archivo": "8277304-cpim-2026.pdf", "pagina": 11, "tipo": "está"},
+  {"id": 15, "pregunta": "¿Cuál es el CAPEX de Optimización Cerro Verde en la CPIM 2026?", "archivo": "8277304-cpim-2026.pdf", "pagina": 20, "tipo": "está"},
+  {"id": 16, "pregunta": "¿Qué produjo Cerro Verde en 2017 (concentrado Cu, Mo y cátodos)?", "archivo": "mineria-cobre-molibdeno-arequipa-minera-cerro-verde-peru-reporte-2017.pdf", "pagina": 3, "tipo": "está"},
+  {"id": 17, "pregunta": "¿Qué capacidad de planta tenía Cerro Verde al cierre de 2017 y a cuánto la ampliaron en 2018?", "archivo": "mineria-cobre-molibdeno-arequipa-minera-cerro-verde-peru-reporte-2017.pdf", "pagina": 6, "tipo": "está"},
+  {"id": 18, "pregunta": "¿Cuál fue el factor de seguridad mínimo del talud norte en el último informe geotécnico?", "archivo": null, "pagina": null, "tipo": "no está"},
+  {"id": 19, "pregunta": "¿Qué inclinómetro registró el mayor desplazamiento en la campaña 2025?", "archivo": null, "pagina": null, "tipo": "no está"},
+  {"id": 20, "pregunta": "¿Qué recomienda Keefner sobre la falla del banco 3540?", "archivo": null, "pagina": null, "tipo": "no está"}
+]
