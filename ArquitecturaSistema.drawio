@@ -1,0 +1,230 @@
+<mxfile host="65bd71144e">
+    <diagram id="arquitectura" name="Arquitectura">
+        <mxGraphModel dx="1122" dy="905" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="960" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="s12-0"/>
+                <mxCell id="s12-1" parent="s12-0"/>
+                <mxCell id="s12-title" value="DocumentAgent — Sistema completo (S12 · 100%)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=22;fontStyle=1;fontColor=#1E3A5F;" vertex="1" parent="s12-1">
+                    <mxGeometry x="48" y="28" width="560" height="32" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-sub" value="Entrega final onsite · S1–S12 cerrados · go confirmado en S6 · chat web + login + corpus ampliado + runbooks" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontColor=#64748B;" vertex="1" parent="s12-1">
+                    <mxGeometry x="48" y="60" width="900" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-scope" value="&lt;b&gt;Incluye:&lt;/b&gt; S1–S6 PoC · S7–S8 UI+login · S9–S10 Excel/OCR · S11–S12 compose onsite&#10;&lt;b&gt;Fuera (no en este cierre):&lt;/b&gt; RBAC · SSO · SharePoint · Bedrock/OpenAI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#059669;fontColor=#1E3A5F;fontSize=10;align=left;spacingLeft=10;verticalAlign=top;spacingTop=6;" vertex="1" parent="s12-1">
+                    <mxGeometry x="980" y="32" width="320" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-users" value="Usuarios" style="swimlane;startSize=26;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontColor=#1E3A5F;fontStyle=1;fontSize=11;" vertex="1" parent="s12-1">
+                    <mxGeometry x="48" y="96" width="1252" height="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-u-ing" value="Ingenieros&#10;(navegador)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontColor=#232F3E;fontSize=10;" vertex="1" parent="s12-users">
+                    <mxGeometry x="48" y="28" width="40" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-u-admin" value="Admin / Operador&#10;(mantenimiento)" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontColor=#232F3E;fontSize=10;" vertex="1" parent="s12-users">
+                    <mxGeometry x="188" y="28" width="40" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-u-browser" value="HTTPS&#10;red local" style="outlineConnect=0;fontColor=#232F3E;fillColor=#FFFFFF;strokeColor=#2563EB;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.client;" vertex="1" parent="s12-users">
+                    <mxGeometry x="320" y="32" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-site" value="Planta / mina · producción (destino final)" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_on_premises;strokeColor=#1E3A5F;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#1E3A5F;" vertex="1" parent="s12-1">
+                    <mxGeometry x="48" y="200" width="1252" height="640" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-disk" value="Disco local / NAS&#10;PDF · chunks · índice · modelos&#10;+ backup índice (runbook)" style="outlineConnect=0;fontColor=#232F3E;fillColor=#7AA116;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.elastic_block_store;" vertex="1" parent="s12-site">
+                    <mxGeometry x="40" y="540" width="64" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-server" value="Servidor GPU onsite · RTX 4090 / A5000 · 16–24 GB VRAM · 32 GB RAM · Docker Compose único" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;html=1;whiteSpace=wrap;fontSize=12;fontStyle=1;container=1;collapsible=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_ec2_instance;strokeColor=#D86613;fillColor=#FAFAFA;verticalAlign=top;align=left;spacingLeft=30;fontColor=#232F3E;" vertex="1" parent="s12-site">
+                    <mxGeometry x="140" y="36" width="1080" height="580" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-zone-ui" value="Acceso web (S7–S8)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontStyle=1;fontColor=#1E3A5F;" vertex="1" parent="s12-server">
+                    <mxGeometry x="40" y="52" width="160" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-web" value="Chat Web UI&#10;streaming · historial" style="outlineConnect=0;fontColor=#1E3A5F;fillColor=#FFFFFF;strokeColor=#2563EB;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.client;" vertex="1" parent="s12-server">
+                    <mxGeometry x="40" y="76" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-login" value="Login&#10;JWT / usuario" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=10;" vertex="1" parent="s12-server">
+                    <mxGeometry x="130" y="78" width="90" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-api" value="API backend&#10;FastAPI / similar" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=10;fontStyle=1;" vertex="1" parent="s12-server">
+                    <mxGeometry x="250" y="78" width="100" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-zone-ing" value="Ingesta ampliada (S2 + S9–S10)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontStyle=1;fontColor=#1E3A5F;" vertex="1" parent="s12-server">
+                    <mxGeometry x="40" y="156" width="200" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-raw" value="PDF · DOCX&#10;Excel/CSV · OCR piloto" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#F1F5F9;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=9;verticalLabelPosition=bottom;verticalAlign=top;align=center;" vertex="1" parent="s12-server">
+                    <mxGeometry x="40" y="172" width="56" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-ingest" value="ingest.py&#10;(extendido)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=10;fontStyle=1;" vertex="1" parent="s12-server">
+                    <mxGeometry x="130" y="182" width="100" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-chunks" value="Chunks&#10;data/chunks/" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=56;tabHeight=18;tabPosition=left;fillColor=#F1F5F9;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=9;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;" vertex="1" parent="s12-server">
+                    <mxGeometry x="262" y="172" width="72" height="64" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-zone-idx" value="Indexación y búsqueda (S3 + S4)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontStyle=1;fontColor=#1E3A5F;" vertex="1" parent="s12-server">
+                    <mxGeometry x="40" y="260" width="220" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-embed" value="FastEmbed&#10;e5-large" style="outlineConnect=0;fontColor=#1E3A5F;fillColor=#FFFFFF;strokeColor=#2563EB;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.sagemaker_model;" vertex="1" parent="s12-server">
+                    <mxGeometry x="40" y="284" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-index" value="Indexer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=10;" vertex="1" parent="s12-server">
+                    <mxGeometry x="130" y="286" width="80" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-bm25" value="BM25&#10;híbrido" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=10;" vertex="1" parent="s12-server">
+                    <mxGeometry x="240" y="286" width="80" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-retrieve" value="retrieve.py" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=10;fontStyle=1;" vertex="1" parent="s12-server">
+                    <mxGeometry x="440" y="286" width="90" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-zone-rag" value="Generación RAG (S5)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=11;fontStyle=1;fontColor=#1E3A5F;" vertex="1" parent="s12-server">
+                    <mxGeometry x="40" y="364" width="160" height="18" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-rag" value="Orquestador&#10;RAG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;fontColor=#1E3A5F;fontSize=10;fontStyle=1;" vertex="1" parent="s12-server">
+                    <mxGeometry x="130" y="388" width="90" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-ollama" value="Ollama&#10;Qwen3 14B" style="outlineConnect=0;fontColor=#1E3A5F;fillColor=#EEF2FF;strokeColor=#6366F1;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_2;" vertex="1" parent="s12-server">
+                    <mxGeometry x="260" y="386" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-cites" value="Citas clicables&#10;archivo + pág." style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#059669;fontColor=#1E3A5F;fontSize=10;" vertex="1" parent="s12-server">
+                    <mxGeometry x="360" y="388" width="110" height="52" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-docker" value="Docker Compose único (S11)" style="swimlane;startSize=26;fillColor=#EEF2FF;strokeColor=#6366F1;fontColor=#312E81;fontStyle=1;fontSize=10;" vertex="1" parent="s12-server">
+                    <mxGeometry x="580" y="52" width="280" height="480" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-dc" value="docker compose&#10;app + Qdrant + Ollama" style="outlineConnect=0;fontColor=#312E81;fillColor=#EEF2FF;strokeColor=#6366F1;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;fontStyle=1;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_1;" vertex="1" parent="s12-docker">
+                    <mxGeometry x="112" y="40" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="edgeStyle=none;html=1;" edge="1" parent="s12-docker" source="s12-do" target="s12-runbook">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="edgeStyle=none;html=1;" edge="1" parent="s12-docker" source="s12-do" target="s12-runbook">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="edgeStyle=none;html=1;" edge="1" parent="s12-docker" source="s12-do" target="s12-runbook">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-do" value="Ollama :11434&#10;GPU" style="outlineConnect=0;fontColor=#1E3A5F;fillColor=#EEF2FF;strokeColor=#6366F1;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=9;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.container_2;" vertex="1" parent="s12-docker">
+                    <mxGeometry x="112" y="220" width="56" height="56" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-da" value="App API + Web&#10;(contenedor o host)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#6366F1;fontColor=#1E3A5F;fontSize=9;" vertex="1" parent="s12-docker">
+                    <mxGeometry x="40" y="310" width="200" height="44" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-runbook" value="Runbooks (S11–S12)&#10;· alta de documentos&#10;· backup índice&#10;· reboot → up → pregunta OK&#10;· capacitación 1 h" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;fontColor=#475569;fontSize=9;align=left;spacingLeft=8;" vertex="1" parent="s12-docker">
+                    <mxGeometry x="24" y="370" width="232" height="88" as="geometry"/>
+                </mxCell>
+                <mxCell id="0" value="&lt;span style=&quot;color: rgb(30, 58, 95); font-size: 9px;&quot;&gt;Qdrant :6333&lt;/span&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#4D72F3;gradientDirection=north;fillColor=#3334B9;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.documentdb_with_mongodb_compatibility;" vertex="1" parent="s12-docker">
+                    <mxGeometry x="110" y="142" width="58" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="sketch=0;aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/mscae/Docker.svg;" vertex="1" parent="s12-docker">
+                    <mxGeometry x="52" y="55" width="50" height="41" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-ui1" style="edgeStyle=none;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-web" target="s12-login">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-ui2" style="edgeStyle=none;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-login" target="s12-api">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-i1" style="edgeStyle=none;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-raw" target="s12-ingest">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-i2" style="edgeStyle=none;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-ingest" target="s12-chunks">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-i3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="s12-server" source="s12-chunks" target="s12-index">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="298" y="252"/>
+                            <mxPoint x="170" y="252"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-e-x1" style="edgeStyle=none;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-embed" target="s12-index">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-x2" style="edgeStyle=none;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-index" target="s12-bm25">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-x3" style="edgeStyle=none;strokeColor=#6366F1;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="s12-server" source="s12-bm25" target="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="406" y="146" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-e-x4" value="top-k" style="edgeStyle=none;strokeColor=#6366F1;strokeWidth=2;endArrow=block;html=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="s12-server" source="8" target="s12-retrieve">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="470" y="145.99999999999977" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-e-api-rag" value="pregunta" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;fontSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="s12-server" source="s12-api" target="s12-rag">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="300" y="360"/>
+                            <mxPoint x="175" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-e-r1" value="contexto" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;fontSize=9;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" parent="s12-server" source="s12-retrieve" target="s12-rag">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="485" y="414"/>
+                            <mxPoint x="220" y="414"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-e-r2" style="edgeStyle=none;strokeColor=#6366F1;strokeWidth=2;endArrow=block;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-rag" target="s12-ollama">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-r3" value="respuesta" style="edgeStyle=none;strokeColor=#059669;strokeWidth=2;endArrow=block;html=1;fontSize=9;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" parent="s12-server" source="s12-ollama" target="s12-cites">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-cites-api" value="JSON + citas" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#059669;strokeWidth=2;endArrow=block;html=1;fontSize=9;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" edge="1" parent="s12-server" source="s12-cites" target="s12-api">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="415" y="360"/>
+                            <mxPoint x="300" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="&lt;span style=&quot;color: rgb(30, 58, 95); font-size: 9px;&quot;&gt;Qdrant :6333&lt;/span&gt;" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#4D72F3;gradientDirection=north;fillColor=#3334B9;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.documentdb_with_mongodb_compatibility;" vertex="1" parent="s12-server">
+                    <mxGeometry x="350" y="284" width="58" height="58" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-e-disk" value="persistencia" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#7AA116;strokeWidth=2;endArrow=block;html=1;fontSize=9;exitX=0;exitY=0.5;entryX=1;entryY=0.85;" edge="1" parent="s12-site" source="s12-server" target="s12-disk">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="120" y="550"/>
+                            <mxPoint x="120" y="595"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-ex-ing" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#64748B;strokeWidth=2;endArrow=block;html=1;fontSize=10;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" parent="s12-1" source="s12-u-ing" target="s12-web">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="124" y="200"/>
+                            <mxPoint x="124" y="142"/>
+                            <mxPoint x="228" y="142"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-ex-resp" value="respuesta + cita" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#059669;strokeWidth=2;endArrow=block;html=1;fontSize=10;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="s12-1" source="s12-cites" target="s12-u-ing">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="80" y="442"/>
+                            <mxPoint x="80" y="184"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-ex-admin" value="alta docs · backup" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#DD344C;strokeWidth=2;endArrow=block;html=1;fontSize=10;exitX=0.5;exitY=1;entryX=0;entryY=0.2;" edge="1" parent="s12-1" source="s12-u-admin" target="s12-server">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="256" y="200"/>
+                            <mxPoint x="188" y="200"/>
+                            <mxPoint x="188" y="352"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="s12-poc-note" value="Fase previa: mismo stack probado en AWS EC2 GPU (PoC S1–S6) · luego empaquetado onsite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;fontColor=#92400E;fontSize=10;dashed=1;" vertex="1" parent="s12-1">
+                    <mxGeometry x="48" y="860" width="620" height="36" as="geometry"/>
+                </mxCell>
+                <mxCell id="s12-foot" value="Entregables S12: repo + docker-compose + set dorado + runbooks + 10 preguntas aceptación · Stack: Ollama Qwen3 14B · FastEmbed · Qdrant · Docker · sin Bedrock/OpenAI" style="text;html=1;strokeColor=#E2E8F0;fillColor=#F8FAFC;align=center;fontSize=10;fontColor=#64748B;rounded=1;" vertex="1" parent="s12-1">
+                    <mxGeometry x="48" y="908" width="1252" height="32" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
