@@ -46,7 +46,7 @@ Archivos de esta semana: `alcance.md` · `data/inventario.md` · `data/set-dorad
 - [ ] Docker + NVIDIA Container Toolkit + GPU visible (`nvidia-smi`)
 - [ ] Ollama instalado y smoke con `qwen3:8b`
 - [ ] Un PDF nativo parseado a texto (prueba de parser)
-- [ ] Alarma de billing si el gasto > USD 20/día
+- [x] Alarma de billing si el gasto > USD 20/día
 - [ ] Regla: **Stop instance** al terminar el día (EBS se queda)
 
 **Entregable S1**
